@@ -201,7 +201,7 @@
             rnds[6] = (rnds[6] & 0x0f) | 0x40;
             rnds[8] = (rnds[8] & 0x3f) | 0x80;
 
-            // Copy bytes to buffer, if provided
+            // Copy bytes to buff if provided
             if (buf) {
                 for (var ii = 0; ii < 16; ii++) {
                     buf[i + ii] = rnds[ii];
@@ -211,7 +211,7 @@
             return buf || unparse(rnds);
         }
 
-        // Export public API
+        // Export Public API
         var uuid = v4;
         uuid.v1 = v1;
         uuid.v4 = v4;
